@@ -2,7 +2,5 @@
 
 ## Java
 
-- LinkedList.java
-
-Simple linked list implementation.
+*LinkedList.java* - Simple linked list implementation.
 
