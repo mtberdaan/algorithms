@@ -2,5 +2,5 @@
 
 ## Java
 
-*LinkedList.java* - Simple linked list implementation.
+[*LinkedList.java*](./java/LinkedList.java) - simple linked list implementation.
 
