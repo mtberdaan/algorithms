@@ -1,4 +1,4 @@
-// linked list
+// LinkedList.java 
 
 public class LinkedList<Item> {
 
