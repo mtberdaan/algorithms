@@ -1,6 +1,8 @@
 // Stack.java
 
 import java.util.Iterator;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Stack<Item> implements Iterable<Item>
 {
@@ -32,7 +34,8 @@ public class Stack<Item> implements Iterable<Item>
         N--;
         return item; // return old item
     }
-    
+   
+    // iterator
     public Iterator<Item> iterator()
     { return new ListIterator(); }
 
@@ -50,8 +53,24 @@ public class Stack<Item> implements Iterable<Item>
             Item item = current.item;
             current = current.next;
             return item;
+        }
     }
-    // test client main
+
+    // test client
+    public static void main(String[] args)
+    { // create a stack and push/pop strings from StdIn.
+    
+        Stack<String> s = new Stack<String>();
+
+        while (!StdIn.isEmpty())
+        {
+            String item = StdIn.readString();
+            if (!item.equals("-"))
+                s.push(item);
+            else if (!s.isEmpty()) StdOut.print(s.pop() + " ");
+        }
+        StdOut.println("(" + s.size() + " left on stack)");
+    } 
 }
 
 

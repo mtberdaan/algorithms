@@ -1,6 +1,8 @@
 // Queue.java
 
 import java.util.Iterator;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Queue<Item> implements Iterable<Item>
 {
@@ -54,7 +56,22 @@ public class Queue<Item> implements Iterable<Item>
             Item item = current.item;
             current = current.next;
             return item;
+        }
     }
-    // test client main
-}
 
+    // test client
+    public static void main(String[] args)
+    { // create a queue and enqueue/dequeue strings
+        
+        Queue<String> q = new Queue<String>();
+
+        while (!StdIn.isEmpty())
+        {
+            String item = StdIn.readString();
+            if (!item.equals("-"))
+                q.enqueue(item);
+            else if (!q.isEmpty()) StdOut.print(q.dequeue() + " ");
+        }
+        StdOut.println("(" + q.size() + " left on queue)");
+    }
+}

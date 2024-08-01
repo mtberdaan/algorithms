@@ -1,6 +1,8 @@
 // Bag.java
 
 import java.util.Iterator;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Bag<Item> implements Iterable<Item>
 {
@@ -42,8 +44,11 @@ public class Bag<Item> implements Iterable<Item>
             Item item = current.item;
             current = current.next;
             return item;
+        }
     }
     // test client main()
+    
+
 }
 
 
