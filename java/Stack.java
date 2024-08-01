@@ -1,5 +1,7 @@
 // Stack.java
 
+import java.util.Iterator;
+
 public class Stack<Item> implements Iterable<Item>
 {
     private Node first; // top of stack
