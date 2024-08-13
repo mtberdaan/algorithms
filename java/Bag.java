@@ -46,7 +46,24 @@ public class Bag<Item> implements Iterable<Item>
             return item;
         }
     }
-    // test client main()
+    // test client
+    public static void main(String[] args)
+    { // add items to bag and itterate them 
+        
+        Bag<String> b = new Bag<String>();
+
+        while (!StdIn.isEmpty())
+        {
+            String item = StdIn.readString();
+            b.add(item);
+        }
+
+        for (String item : b) {
+            StdOut.println(item);
+        }
+
+        StdOut.println("(" + b.size() + " items in bag)");
+    }
     
 
 }
